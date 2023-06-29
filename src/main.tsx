@@ -9,6 +9,9 @@ import Register from "./routes/Register.tsx";
 import ResetPassword from "./routes/ResetPassword.tsx";
 import ErrorPage from "./routes/ErrorPage.tsx";
 
+// actions for the routes:
+import { registerAction } from "./actions.ts";
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -21,6 +24,7 @@ const router = createBrowserRouter([
     {
         path: "/register",
         element: <Register />,
+        action: registerAction,
     },
     {
         path: "/reset-password",
