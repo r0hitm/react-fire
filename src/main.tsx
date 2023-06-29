@@ -10,7 +10,7 @@ import ResetPassword from "./routes/ResetPassword.tsx";
 import ErrorPage from "./routes/ErrorPage.tsx";
 
 // actions for the routes:
-import { registerAction } from "./actions.ts";
+import { registerAction, loginAction } from "./actions.ts";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +20,7 @@ const router = createBrowserRouter([
     {
         path: "/login",
         element: <Login />,
+        action: loginAction,
     },
     {
         path: "/register",
